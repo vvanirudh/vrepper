@@ -28,7 +28,8 @@ for j in range(5):
         venv.step_blocking_simulation() # forward 1 timestep
 
     # stop the simulation and reset the scene:
-    venv.stop_blocking_simulation()
+    # venv.stop_blocking_simulation()
+    venv.stop_simulation()
 
 print('simulation ended. leaving in 5 seconds...')
 time.sleep(5)

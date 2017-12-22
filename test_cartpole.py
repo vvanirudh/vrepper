@@ -58,13 +58,15 @@ class CartPoleVREPEnv(gym.Env):
         return self.observation, -cost, False, {}
 
     def _reset(self):
-        self.venv.stop_blocking_simulation()
+        # self.venv.stop_blocking_simulation()
+        self.venv.stop_simulation()
         self.venv.start_blocking_simulation()
         self._self_observe()
         return self.observation
 
     def _destroy(self):
-        self.venv.stop_blocking_simulation()
+        # self.venv.stop_blocking_simulation()
+        self.venv.stop_simulation()
         self.venv.end()
 
 if __name__ == '__main__':
